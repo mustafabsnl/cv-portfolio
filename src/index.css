@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply min-h-screen bg-gradient-to-b from-blue-200 via-blue-400 to-blue-900;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .card-hover:hover {
+    transform: scale(1.05);
+  }
+  
+  .gradient-text {
+    background: linear-gradient(135deg, #d97706 0%, #d946ef 50%, #10b981 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .skill-badge {
+    @apply px-3 py-1 rounded-full text-sm font-medium border;
+  }
+  
+  .timeline-item {
+    @apply relative pl-8 pb-8;
+  }
+  
+  .timeline-item::before {
+    content: '';
+    @apply absolute left-0 top-2 w-3 h-3 bg-gradient-to-r from-accent-500 to-primary-500 rounded-full;
+  }
+  
+  .timeline-item::after {
+    content: '';
+    @apply absolute left-1.5 top-5 w-0.5 h-full bg-gradient-to-b from-accent-200 to-primary-200;
+  }
+  
+  .timeline-item:last-child::after {
+    display: none;
+  }
+} 

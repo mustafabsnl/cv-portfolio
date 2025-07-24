@@ -1,0 +1,36 @@
+# node_modules (en önemli)
+node_modules/
+
+# build dosyaları
+build/
+
+# .env dosyaları (gizli anahtarlar içerir)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# sistem dosyaları
+.DS_Store
+Thumbs.db
+
+# log dosyaları
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# editor ve IDE dosyaları
+.vscode/
+.idea/
+*.suo
+.ntvs
+*.njsproj
+*.sln
+*.sw?
+
+# coverage (test sonucu)
+coverage/
+
+# misc
+*.tgz
