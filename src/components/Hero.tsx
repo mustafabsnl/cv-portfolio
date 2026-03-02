@@ -30,8 +30,8 @@ const Hero: React.FC = () => {
   // CV indirme fonksiyonu
   const handleCVDownload = () => {
     const link = document.createElement('a');
-    link.href = process.env.PUBLIC_URL + '/mustafa_bosnali_CV.pdf';
-    link.download = 'mustafa_bosnali_CV.pdf';
+    link.href = process.env.PUBLIC_URL + '/Mustafa_BOSNALI_CV_.pdf';
+    link.download = 'Mustafa_BOSNALI_CV_.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
         const sizes = ["text-2xl", "text-3xl", "text-4xl", "text-5xl", "text-6xl"];
         const colors = ["text-cyan-300", "text-blue-300", "text-cyan-400", "text-blue-400", "text-cyan-200", "text-blue-200"];
         const opacities = ["opacity-60", "opacity-70", "opacity-80"];
-        const yAnim = Math.random() > 0.5 ? { y: [0, Math.floor(Math.random()*40)-20, 0] } : { x: [0, Math.floor(Math.random()*40)-20, 0] };
+        const yAnim = Math.random() > 0.5 ? { y: [0, Math.floor(Math.random() * 40) - 20, 0] } : { x: [0, Math.floor(Math.random() * 40) - 20, 0] };
         const duration = 6 + Math.random() * 6;
         const top = tops[Math.floor(Math.random() * tops.length)];
         const left = lefts[Math.floor(Math.random() * lefts.length)];
@@ -77,8 +77,8 @@ const Hero: React.FC = () => {
             <img src={profilPhoto} alt="Mustafa Bosnalı" className="w-full h-full object-cover" />
           </div>
           <h1 className="text-6xl md:text-7xl font-bold text-gray-900 text-center">Mustafa Bosnalı</h1>
-          <h2 className="text-3xl md:text-4xl text-gray-900 font-medium text-center">Backend Developer</h2>
-          <p className="text-xl text-gray-900 max-w-2xl mx-auto leading-relaxed text-center">Karmaşık sistemleri sadeleştirmeyi, arka planda sorunsuz çalışan yapılar inşa etmeyi hedefleyen bir backend geliştiricisiyim.</p>
+          <h2 className="text-3xl md:text-4xl text-gray-900 font-medium text-center">Full Stack Developer</h2>
+          <p className="text-xl text-gray-900 max-w-2xl mx-auto leading-relaxed text-center">Karmaşık sistemleri sadeleştirmeyi, arka planda sorunsuz çalışan yapılar inşa etmeyi hedefleyen bir Full Stack Developerim.</p>
         </div>
         {/* Sosyal ikonlar ve butonlar */}
         <div className="flex flex-col items-center gap-8 w-full">

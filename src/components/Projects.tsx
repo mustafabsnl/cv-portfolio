@@ -20,6 +20,21 @@ const Projects: React.FC = () => {
       technologies: ['Ubuntu', 'ROS Noetic', 'Gazebo', 'Mission Planner', 'Ardupilot', "MAVROS", "MAVLink", "TurtleBot3"],
       category: 'blockchain',
       emoji: '🔗'
+    },
+    {
+      id: 2,
+      title: 'Teknofest Savaşan İHA Yarışması',
+      description: [
+        'TEKNOFEST Savaşan İHA kategorisinde sabit kanatlı bir İHA ile hava-hava muharebe senaryolarına yönelik otonom sistemler geliştirdik. İlk aşamada hazır Talon altyapısı kullanarak sistemi doğruladık, ardından tamamen kendi tasarımımız olan komple karbon gövdeli özgün bir uçak üreterek yarışmaya Hazırlandık.',
+        '',
+        'Araç üzerindeki kamera ile rakip İHA\'ları gerçek zamanlı tespit edip, YOLO tabanlı nesne tanıma modelleri eğiterek otonom kilitlenme altyapısı oluşturduk. Roboflow üzerinden veri setleri hazırlayarak model performansını optimize ettik. Otonom kalkış, uçuş, kilitlenme ve iniş süreçlerinin tamamı yazılımsal olarak yönetilmektedir.',
+        '',
+        'Yer kontrol istasyonu tasarlayarak telemetri, konum, hız ve batarya gibi uçuş verilerinin gerçek zamanlı izlenmesini sağladık. Yarışma sunucusu ile haberleşme altyapısı kurarak kilitlenme verilerini ve uçuş bilgilerini anlık olarak aktardık. Kamikaze İHA görevi kapsamında yer hedeflerine otonom dalış ve QR kod okuma sistemi de projeye dahil edildi.'
+      ].join('\n\n'),
+      image: process.env.PUBLIC_URL + '/savasan_iha.jpg',
+      technologies: ['Python', 'YOLOv8', 'Roboflow', 'OpenCV', 'ROS2', 'Gazebo', 'Mission Planner', 'MAVLink'],
+      category: 'ai',
+      emoji: '🎯'
     }
   ];
 
@@ -38,7 +53,7 @@ const Projects: React.FC = () => {
         const sizes = ["text-2xl", "text-3xl", "text-4xl", "text-5xl", "text-6xl"];
         const colors = ["text-cyan-300", "text-blue-300", "text-cyan-400", "text-blue-400", "text-cyan-200", "text-blue-200"];
         const opacities = ["opacity-60", "opacity-70", "opacity-80"];
-        const yAnim = Math.random() > 0.5 ? { y: [0, Math.floor(Math.random()*40)-20, 0] } : { x: [0, Math.floor(Math.random()*40)-20, 0] };
+        const yAnim = Math.random() > 0.5 ? { y: [0, Math.floor(Math.random() * 40) - 20, 0] } : { x: [0, Math.floor(Math.random() * 40) - 20, 0] };
         const duration = 6 + Math.random() * 6;
         const top = tops[Math.floor(Math.random() * tops.length)];
         const left = lefts[Math.floor(Math.random() * lefts.length)];
@@ -58,8 +73,8 @@ const Projects: React.FC = () => {
         );
       })}
       {/* Decorative Elements - Enlarged */}
-      
-      
+
+
       <div className="max-w-screen-2xl mx-auto px-2 sm:px-4 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -80,7 +95,7 @@ const Projects: React.FC = () => {
 
         {/* Projects Grid */}
         <div className="flex justify-center">
-          <div className="w-full max-w-2xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 w-full">
             {filteredProjects.map((project, index) => (
               <motion.div
                 key={project.id}
@@ -101,7 +116,7 @@ const Projects: React.FC = () => {
                     transition={{ duration: 0.3 }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  
+
                 </div>
 
                 {/* Project Content */}
@@ -161,61 +176,6 @@ const Projects: React.FC = () => {
           </div>
         </div>
 
-        {/* Additional Projects Info */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="mt-24"
-        >
-          <div className="rounded-3xl p-16 bg-white shadow-[0_0_24px_0_#00f6ff99] border border-neon-blue card-hover transition-transform duration-300">
-            <h3 className="text-4xl font-semibold text-gray-900 mb-10 text-center">
-              Proje Oluşturma Aşamalarım
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-              {[
-                {
-                  icon: '💡',
-                  title: 'Analiz',
-                  description: 'Proje kapsamını derinlemesine inceleme'
-                },
-                {
-                  icon: '🎨',
-                  title: 'Tasarım',
-                  description: 'kullanıcı dostu tasarım'
-                },
-                {
-                  icon: '⚡',
-                  title: 'Geliştirme',
-                  description: 'Yenilikçi araçlarla güçlü kodlar'
-                },
-                {
-                  icon: '🚀',
-                  title: 'Deploy',
-                  description: 'Sorunsuz ve optimize edilmiş dağıtım'
-                }
-              ].map((step, index) => (
-                <motion.div
-                  key={step.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-center p-8 bg-white rounded-3xl border border-gray-200 text-gray-900"
-                >
-                  <div className="text-5xl mb-4">{step.icon}</div>
-                  <h4 className="text-2xl font-semibold mb-4">
-                    {step.title}
-                  </h4>
-                  <p className="text-gray-600 text-lg leading-relaxed">
-                    {step.description}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

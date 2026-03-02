@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
       >
         🛩️
       </motion.div>
-      
+
       <motion.div
         animate={{
           y: [0, 20, 0],
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
               Mustafa BOSNALI
             </h3>
             <p className="text-neon-beige leading-relaxed text-lg">
-            Backend teknolojilerine ilgi duyan, kendini geliştirmeye açık bir yazılım geliştirici adayıyım. Java ile nesne yönelimli projeler geliştiriyor, otomasyon sistemleri ve savunma sanayiine yönelik güvenli, ölçeklenebilir çözümler üretmeyi hedefliyorum.
+              Savunma Sanayii ve Backend teknolojilerine ilgi duyan, kendini geliştirmeye açık bir yazılım geliştirici adayıyım. Java ile nesne yönelimli projeler geliştiriyor, otomasyon sistemleri ve savunma sanayiine yönelik güvenli, ölçeklenebilir çözümler üretmeyi hedefliyorum.
 
 
             </p>
@@ -157,7 +157,7 @@ const Footer: React.FC = () => {
             © {currentYear} Mustafa BOSNALI. Tüm hakları saklıdır.
           </p>
           <p className="text-gray-400 text-lg mt-4 md:mt-0">
-  
+
           </p>
         </motion.div>
       </div>

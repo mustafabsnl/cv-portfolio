@@ -14,16 +14,16 @@ const About: React.FC = () => {
       degree: 'Bilgisayar Mühendisliği',
       school: 'Selçuk Üniversitesi',
       period: '2023 - 2027',
-      gpa: '3.33',
+      gpa: '3.35',
       description: 'Bilgisayar bilimleri, algoritma analizi ve yazılım geliştirme konularında kapsamlı eğitim.'
     }
   ];
 
   const interests = [
-    'Backend Geliştirme',
+    'Savunma Sanayii',
     'Yapay Zeka',
     'Görüntü İşleme',
-    'Veri Bilimi',
+    'Backend Geliştirme',
     'Makine Öğrenmesi',
     'Robotik',
     'ROS (Robot Operating System)',
@@ -43,7 +43,7 @@ const About: React.FC = () => {
         const sizes = ["text-2xl", "text-3xl", "text-4xl", "text-5xl", "text-6xl"];
         const colors = ["text-cyan-300", "text-blue-300", "text-cyan-400", "text-blue-400", "text-cyan-200", "text-blue-200"];
         const opacities = ["opacity-60", "opacity-70", "opacity-80"];
-        const yAnim = Math.random() > 0.5 ? { y: [0, Math.floor(Math.random()*40)-20, 0] } : { x: [0, Math.floor(Math.random()*40)-20, 0] };
+        const yAnim = Math.random() > 0.5 ? { y: [0, Math.floor(Math.random() * 40) - 20, 0] } : { x: [0, Math.floor(Math.random() * 40) - 20, 0] };
         const duration = 6 + Math.random() * 6;
         const top = tops[Math.floor(Math.random() * tops.length)];
         const left = lefts[Math.floor(Math.random() * lefts.length)];
@@ -62,7 +62,7 @@ const About: React.FC = () => {
           </motion.div>
         );
       })}
-      
+
       <div className="max-w-screen-2xl mx-auto px-2 sm:px-4 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -75,7 +75,7 @@ const About: React.FC = () => {
             Hakkımda
           </h2>
           <p className="text-2xl text-white max-w-5xl mx-auto leading-relaxed">
-          Akıllı sistemler, yapay zeka, makine öğrenmesi ve görüntü işleme gibi ileri teknolojiler üzerine çalışan; farklı sektörlerdeki gerçek dünya problemlerine yenilikçi yazılım çözümleri geliştirmeyi hedefleyen bir yazılım geliştiricisiyim.
+            Savunma Sanayii, Akıllı sistemler, yapay zeka, makine öğrenmesi ve görüntü işleme gibi ileri teknolojiler üzerine çalışan; farklı sektörlerdeki gerçek dünya problemlerine yenilikçi yazılım çözümleri geliştirmeyi hedefleyen bir yazılım geliştiricisiyim.
           </p>
         </motion.div>
 
@@ -95,16 +95,13 @@ const About: React.FC = () => {
                 </h3>
                 <div className="space-y-8 text-gray-600 leading-relaxed text-xl">
                   <p>
-                    Konya Selçuk Üniversitesi Bilgisayar Mühendisliği öğrencisiyim. 
-                    Eğitim hayatımın başından itibaren savunma sanayii ve yazılım geliştirme alanlarında kendimi geliştirmeye odaklandım..
+                    Selçuk Üniversitesi Bilgisayar Mühendisliği öğrencisiyim. Yazılım geliştirme, yapay zeka, robotik ve savunma sanayii alanlarına güçlü bir ilgi duyuyor; bu alanlarda aktif olarak projeler yürütüyorum. Şu anda TEKNOFEST Savaşan İHA kategorisinde yer alarak otonom sistemler üzerine çalışmalarımı sürdürüyorum.
                   </p>
                   <p>
-                    Python programlama dili ile model geliştirme ve görüntü işleme konularında deneyim sahibiyim. TEKNOFEST kapsamında sabit kanatlı İHA projelerinde görev aldım. 
-                    ROS ve Ubuntu ortamında çalışma tecrübesine sahibim.
+                    Farklı sektörlerde staj deneyimleri edinerek hem backend geliştirme hem de endüstriyel otomasyon süreçlerinde pratik tecrübe kazandım. Geniş bir teknoloji yelpazesine hâkim olarak sürekli öğrenmeyi ve kendimi geliştirmeyi ilke ediniyorum.
                   </p>
                   <p>
-                    Savunma sanayii odaklı firmalarda gönüllü ve kısa dönem proje deneyimleri kazandım. Ayrıca otomasyon projelerinde yer alma fırsatı buldum. 
-                    Yazılım geliştirme ve savunma sanayii alanlarında kendimi geliştirmeye devam ediyor, kariyerimi bu doğrultuda şekillendirmeyi hedefliyorum.
+                    Kariyerimi yazılım ve savunma sanayii kesişiminde şekillendirmeyi hedefliyor, yenilikçi çözümler üretmeye odaklanıyorum.
                   </p>
                 </div>
               </div>

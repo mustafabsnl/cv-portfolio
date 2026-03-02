@@ -7,7 +7,12 @@ const references = [
   {
     name: 'Yakup Emre AKALIN',
     email: 'emre.akalin@altinay.com',
-    title: 'ALTINAY Technology Group şirketinde Area Manager'
+    title: 'ALTINAY Technology Group\nArea Manager'
+  },
+  {
+    name: 'Yavuz Metin KOÇ',
+    email: 'yavuzmetin.koc@ict.btk.gov.tr',
+    title: 'Bilgi Teknolojileri ve İletişim Kurumu'
   }
 ];
 
@@ -25,7 +30,7 @@ const References: React.FC = () => {
         const sizes = ["text-2xl", "text-3xl", "text-4xl", "text-5xl"];
         const colors = ["text-blue-300", "text-blue-400", "text-blue-200"];
         const opacities = ["opacity-60", "opacity-70", "opacity-80"];
-        const yAnim = Math.random() > 0.5 ? { y: [0, Math.floor(Math.random()*40)-20, 0] } : { x: [0, Math.floor(Math.random()*40)-20, 0] };
+        const yAnim = Math.random() > 0.5 ? { y: [0, Math.floor(Math.random() * 40) - 20, 0] } : { x: [0, Math.floor(Math.random() * 40) - 20, 0] };
         const duration = 6 + Math.random() * 6;
         const top = tops[Math.floor(Math.random() * tops.length)];
         const left = lefts[Math.floor(Math.random() * lefts.length)];
@@ -55,7 +60,7 @@ const References: React.FC = () => {
           <h2 className="text-6xl font-bold text-white mb-8">Referanslar</h2>
           <p className="text-2xl text-gray-900 max-w-5xl mx-auto leading-relaxed">Hakkımda söylenenler ve işbirliği yapılan kişilerden alınan referanslar</p>
         </motion.div>
-        <div className="grid grid-cols-1 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {references.map((ref, idx) => (
             <motion.div
               key={idx}
@@ -64,13 +69,13 @@ const References: React.FC = () => {
               whileHover={{ x: 0, scale: 1.05 }}
               transition={{ duration: 0.6, type: 'spring' }}
               viewport={{ once: true }}
-              className="rounded-2xl p-12 bg-white shadow-[0_0_24px_0_#00f6ff99] border-2 border-neon-blue flex flex-col items-center max-w-xl mx-auto"
+              className="rounded-2xl p-12 bg-white shadow-[0_0_24px_0_#00f6ff99] border-2 border-neon-blue flex flex-col items-center h-full"
             >
               <div className="w-20 h-20 bg-blue-900 rounded-full flex items-center justify-center mb-2">
                 <User className="w-10 h-10 text-white" />
               </div>
-              <span className="text-xl font-bold text-blue-900 mb-1">{ref.name}</span>
-              <span className="text-base italic text-gray-500 mb-1">{ref.title}</span>
+              <span className="text-xl font-bold text-blue-900 mb-1 text-center">{ref.name}</span>
+              <span className="text-base italic text-gray-500 mb-1 text-center whitespace-pre-line">{ref.title}</span>
               <a href={`mailto:${ref.email}`} className="flex items-center gap-2 text-blue-700 hover:underline mt-2">
                 <MailIcon className="w-5 h-5" />
                 <span>{ref.email}</span>
